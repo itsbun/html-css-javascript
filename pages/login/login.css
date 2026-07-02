@@ -1,0 +1,159 @@
+/* Login Screen Stylesheets */
+
+/* Login Header */
+.login__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login__header-title {
+  font-size: 24px;
+  font-weight: 700;
+  font-style: Bold;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
+
+.login__header-description {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #6b7280;
+}
+
+.login__header-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.login__header-social-item {
+  width: 8.75em;
+  height: 2.5em;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.login__header-social-item > img {
+  width: 14px;
+  height: 18px;
+}
+
+.login__header-social-item > button {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.login__header-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.login__header-divider::before,
+.login__header-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.login__header-divider::before {
+  margin-right: 15px;
+}
+
+.login__header-divider::after {
+  margin-left: 15px;
+}
+
+/* Login Form */
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login__form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Form Validation */
+.emailError,
+.passwordError {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Login Options */
+.login__option,
+.login__option-remember {
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.login__option-forgot {
+  font-weight: 600;
+  line-height: 20px;
+  color: #5046e5;
+  text-decoration: none;
+}
+
+.login__option-forgot:hover {
+  text-decoration: underline;
+  background-color: none;
+  cursor: pointer;
+}
+
+.login__btn-submit {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #5046e5;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Login Footer */
+.login__footer {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.login__footer > a {
+  color: #5046e5;
+  font-size: 16px;
+  font-weight: 600;
+}

@@ -1,0 +1,63 @@
+/* Intro Panel Stylesheet */
+.intro__panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  padding: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  text-wrap: wrap;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6c63ff 0%, #4f46e5 40%, #7c6af7 100%);
+  background-color: #5046e5;
+  border-radius: 16px 0px 0px 16px;
+}
+
+.intro__panel-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.intro__panel-circle-children {
+  position: absolute;
+  top: 79px;
+  left: 10px;
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.intro__panel-circle {
+  position: absolute;
+  top: 32px;
+  left: 150px;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.intro__panel-description {
+  margin-top: 12px;
+  opacity: 0.7;
+}
+
+.intro__panel-info {
+  opacity: 0.8;
+}
+
+.intro__panel-info-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0px;
+  line-height: 20px;
+}

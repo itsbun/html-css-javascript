@@ -1,0 +1,52 @@
+/* Common Stylesheets */
+@import url("https://googleapis.com");
+
+body {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  background-color: #e5e7eb;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  width: 896px;
+  min-height: 44em;
+  margin: 32px auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 0px 16px 16px 0px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input {
+  height: 30px;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+input:focus,
+.login__btn-submit:focus {
+  outline: none;
+  cursor: pointer;
+}

@@ -1,0 +1,59 @@
+<!-- Login Pages -->
+<link rel="stylesheet" href="./pages/login/login.css" />
+
+<div class="login__header">
+  <h2 class="login__header-title">Welcome back</h2>
+  <p class="login__header-description">
+    Sign in to continue to your workspace.
+  </p>
+
+  <div class="login__header-social">
+    <div class="login__header-social-item">
+      <img src="../../assets/ic-google.svg" alt="Google Icon" />
+      <button>Continue with Google</button>
+    </div>
+
+    <div class="login__header-social-item">
+      <img src="../../assets/ic-github.svg" alt="GitHub Icon" />
+      <button>Continue with GitHub</button>
+    </div>
+  </div>
+
+  <div class="login__header-divider">
+    <span>or sign in with email</span>
+  </div>
+</div>
+
+<form id="loginForm">
+  <div class="login__form">
+    <div class="login__form-item">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@company.com" />
+      <p class="emailError"></p>
+    </div>
+
+    <div class="login__form-item">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" />
+      <p class="passwordError"></p>
+    </div>
+  </div>
+
+  <div class="login__option">
+    <div class="login__option-remember">
+      <input type="checkbox" />
+      <span>Remember me</span>
+    </div>
+
+    <a class="login__option-forgot" href="?page=forgot_password">
+      Forgot Password?
+    </a>
+  </div>
+
+  <button type="submit" class="login__btn-submit">Sign in</button>
+</form>
+
+<div class="login__footer">
+  <p>Don't have an account?</p>
+  <a href="?page=register">Sign up</a>
+</div>

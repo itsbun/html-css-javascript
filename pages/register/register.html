@@ -1,0 +1,72 @@
+<!-- Register Page -->
+<link rel="stylesheet" href="./pages/register/register.css" />
+
+<div class="register__header">
+  <h2 class="register__header-title">Create an account</h2>
+  <p class="register__header-description">
+    Start your 14-day free trial. No card required.
+  </p>
+
+  <div class="register__header-social">
+    <div class="register__header-social-item">
+      <img src="../../assets/ic-google.svg" alt="Google Icon" />
+      <button>Google</button>
+    </div>
+
+    <div class="register__header-social-item">
+      <img src="../../assets/ic-github.svg" alt="GitHub Icon" />
+      <button>GitHub</button>
+    </div>
+  </div>
+
+  <div class="register__header-divider">
+    <span>or</span>
+  </div>
+</div>
+
+<form id="registerForm">
+  <div class="register__form">
+    <div class="register__form-item">
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" placeholder="Avery Johnson" />
+      <p class="fullNameError"></p>
+    </div>
+
+    <div class="register__form-item">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@company.com" />
+      <p class="emailError"></p>
+    </div>
+
+    <div class="register__form-item">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" />
+      <p class="passwordError"></p>
+    </div>
+
+    <div class="register__form-item">
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm-password"
+        placeholder="Re-enter your password"
+      />
+      <p class="confirmPasswordError"></p>
+    </div>
+  </div>
+
+  <div class="register__terms">
+    <input type="checkbox" required />
+    <p>
+      I agree to the <a href="#">Terms of Service</a> and
+      <a href="#">Privacy Policy</a>.
+    </p>
+  </div>
+
+  <button type="submit" class="register__btn-submit">Create account</button>
+</form>
+
+<div class="register__footer">
+  <p>Already have an account?</p>
+  <a href="?page=login">Sign in</a>
+</div>
