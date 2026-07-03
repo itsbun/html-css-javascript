@@ -1,0 +1,27 @@
+<!-- Verify Email Pages -->
+<link rel="stylesheet" href="./pages/verify-email/verify-email.css" />
+
+<div class="verify-email__header">
+  <img src="../../assets/ic-email.svg" alt="Verify Email Icon" />
+  <h2 class="verify-email__title">Verify your email</h2>
+  <p class="verify-email__description">
+    We sent a 6-digit code to <strong>your email</strong>. Enter it below to
+    confirm your address.
+  </p>
+</div>
+
+<form id="otp-form">
+  <div data-include="components/otp-input/otp-input.html"></div>
+  <button type="submit" class="verify-email__submit">Verify Code</button>
+</form>
+
+<div class="verify-email__footer">
+  <div>
+    <p>Didn't get it?</p>
+    <a href="#" class="verify-email__resend-link">Resend code</a>
+  </div>
+  <div>
+    <img src="../../assets/ic-arrow-left.svg" alt="arrow-left" />
+    <a href="?page=login" class="verify-email__back-link"> Back to sign in </a>
+  </div>
+</div>

@@ -8,4 +8,5 @@ export const routes = {
   register: "pages/register/register.html",
   forgot_password: "pages/forgot-password/forgot-password.html",
   reset_password: "pages/reset-password/reset-password.html",
+  verify_email: "pages/verify-email/verify-email.html",
 };
