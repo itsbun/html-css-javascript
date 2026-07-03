@@ -1,5 +1,5 @@
 /**
- * Validation Patterns: for specialized input validation, such as email and password formats
+ * Validation Regex: for specialized input validation, such as email and password formats
  */
 
 export const isValidEmail = (email) => {

@@ -17,18 +17,18 @@
 }
 
 .verify-email__title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   line-height: 32px;
   letter-spacing: 0;
 }
 
 .verify-email__description {
   margin-bottom: 20px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
   line-height: 20px;
-  color: #6b7280;
+  color: var(--color-text-muted);
 }
 
 .verify-email__description > strong {
@@ -49,8 +49,8 @@
 
 /* Validation */
 .verify-email__error {
-  color: #ef4444;
-  font-size: 12px;
+  color: var(--color-error);
+  font-size: var(--font-size-xs);
   margin-top: 4px;
   font-style: italic;
 }
@@ -60,12 +60,12 @@
   margin-top: 20px;
   width: 100%;
   padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #5046e5;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  background-color: var(--color-primary);
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   cursor: pointer;
 }
 
@@ -77,8 +77,8 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
 }
 
 .verify-email__footer :first-child {
@@ -88,8 +88,8 @@
 }
 
 .verify-email__footer :first-child > a {
-  color: #5046e5;
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
 }
 
 .verify-email__footer > div:nth-child(2) {
@@ -98,7 +98,7 @@
 }
 
 .verify-email__back-link {
-  color: #5046e5;
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
 }

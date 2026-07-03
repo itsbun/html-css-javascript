@@ -3,32 +3,32 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
   height: 2em;
   padding: 16px 8px;
-  font-size: 12px;
-  font-weight: 400;
-  color: #6b7280;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-muted);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header__nav-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: var(--space-1);
   height: 20px;
   padding: 4px 12px;
-  font-weight: 600;
-  color: #6b7280;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
   text-decoration: none;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
 }
 
 .header__nav-item:hover,
 .header__nav-item.active {
-  color: #ffffff;
-  background-color: #5046e5;
+  color: var(--color-white);
+  background-color: var(--color-primary);
   cursor: pointer;
 }

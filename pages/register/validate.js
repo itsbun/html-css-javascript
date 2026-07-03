@@ -1,8 +1,8 @@
 /**
  * Validation: register form
  */
-import { navigateTo } from "../apps/router.js";
-import { isValidEmail, isValidPassword } from "./pattern.js";
+import { navigateTo } from "../../apps/router.js";
+import { isValidEmail, isValidPassword } from "../../scripts/regex.js";
 
 export const validateRegister = () => {
   const registerForm = document.getElementById("registerForm");
@@ -14,15 +14,18 @@ export const validateRegister = () => {
   registerForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const fullName = document.getElementById("full-name").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirm-password").value;
+    const formData = new FormData(registerForm);
+    const fullName = String(formData.get("fullName") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const password = String(formData.get("password") ?? "").trim();
+    const confirmPassword = String(
+      formData.get("confirmPassword") ?? "",
+    ).trim();
 
-    const fullNameError = document.querySelector(".fullNameError");
-    const emailError = document.querySelector(".emailError");
-    const passwordError = document.querySelector(".passwordError");
-    const confirmPasswordError = document.querySelector(
+    const fullNameError = registerForm.querySelector(".fullNameError");
+    const emailError = registerForm.querySelector(".emailError");
+    const passwordError = registerForm.querySelector(".passwordError");
+    const confirmPasswordError = registerForm.querySelector(
       ".confirmPasswordError",
     );
 
@@ -33,14 +36,12 @@ export const validateRegister = () => {
 
     let isValid = true;
 
-    // Full name validation
-    if (fullName.trim() === "") {
+    if (fullName === "") {
       fullNameError.textContent = "Full name is required.";
       isValid = false;
     }
 
-    // Email validation
-    if (email.trim() === "") {
+    if (email === "") {
       emailError.textContent = "Email is required.";
       isValid = false;
     } else if (!isValidEmail(email)) {
@@ -48,8 +49,7 @@ export const validateRegister = () => {
       isValid = false;
     }
 
-    // Password validation
-    if (password.trim() === "") {
+    if (password === "") {
       passwordError.textContent = "Password is required.";
       isValid = false;
     } else if (!isValidPassword(password)) {
@@ -57,8 +57,7 @@ export const validateRegister = () => {
       isValid = false;
     }
 
-    // Confirm password validation
-    if (confirmPassword.trim() === "") {
+    if (confirmPassword === "") {
       confirmPasswordError.textContent = "Please confirm your password.";
       isValid = false;
     } else if (password !== confirmPassword) {

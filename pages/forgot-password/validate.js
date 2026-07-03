@@ -1,7 +1,7 @@
 /**
  * Validation: forgot password form
  */
-import { isValidEmail } from "./pattern.js";
+import { isValidEmail } from "../../scripts/regex.js";
 
 export const validateForgotPassword = () => {
   const forgotPasswordForm = document.getElementById("forgotPasswordForm");
@@ -13,16 +13,18 @@ export const validateForgotPassword = () => {
   forgotPasswordForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const email = document.getElementById("email").value;
+    const formData = new FormData(forgotPasswordForm);
+    const email = String(formData.get("email") ?? "").trim();
 
-    const emailError = document.querySelector(".forgot-password__error");
+    const emailError = forgotPasswordForm.querySelector(
+      ".forgot-password__error",
+    );
 
     emailError.textContent = "";
 
     let isValid = true;
 
-    // Email validation
-    if (email.trim() === "") {
+    if (email === "") {
       emailError.textContent = "Email is required.";
       isValid = false;
     } else if (!isValidEmail(email)) {

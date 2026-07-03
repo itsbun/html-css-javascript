@@ -1,15 +1,7 @@
 /**
- * Verify email script logic
- */
-import {
-  initOtpInput,
-  getOtpValue,
-} from "../../components/otp-input/otp-input.js";
-
-/**
  * Validation: verify email form
  */
-const validateVerifyEmail = () => {
+export const validateVerifyEmail = () => {
   const form = document.getElementById("otp-form");
 
   if (!form) {
@@ -25,7 +17,11 @@ const validateVerifyEmail = () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const code = getOtpValue(form);
+    const formData = new FormData(form);
+    const code = formData
+      .getAll("otp")
+      .map((value) => String(value).trim())
+      .join("");
 
     if (code.length !== 6) {
       alert("Please enter the full verification code.");
@@ -34,9 +30,4 @@ const validateVerifyEmail = () => {
 
     alert(`Code submitted: ${code}`);
   });
-};
-
-export const verifyEmailScript = () => {
-  initOtpInput();
-  validateVerifyEmail();
 };

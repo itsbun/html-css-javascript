@@ -1,7 +1,7 @@
 /**
  * Validation: login form
  */
-import { isValidEmail } from "./pattern.js";
+import { isValidEmail } from "../../scripts/regex.js";
 
 export const validateLogin = () => {
   const loginForm = document.getElementById("loginForm");
@@ -13,19 +13,19 @@ export const validateLogin = () => {
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const formData = new FormData(loginForm);
+    const email = String(formData.get("email") ?? "").trim();
+    const password = String(formData.get("password") ?? "").trim();
 
-    const emailError = document.querySelector(".emailError");
-    const passwordError = document.querySelector(".passwordError");
+    const emailError = loginForm.querySelector(".emailError");
+    const passwordError = loginForm.querySelector(".passwordError");
 
     emailError.textContent = "";
     passwordError.textContent = "";
 
     let isValid = true;
 
-    // Email validation
-    if (email.trim() === "") {
+    if (email === "") {
       emailError.textContent = "Email is required.";
       isValid = false;
     } else if (!isValidEmail(email)) {
@@ -33,8 +33,7 @@ export const validateLogin = () => {
       isValid = false;
     }
 
-    // Password validation
-    if (password.trim() === "") {
+    if (password === "") {
       passwordError.textContent = "Password is required.";
       isValid = false;
     }

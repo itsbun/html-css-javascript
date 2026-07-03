@@ -3,11 +3,12 @@
  */
 import { routes } from "./routes.js";
 import { loadLayout, toggleNavigation } from "../scripts/common.js";
-import { validateForgotPassword } from "../validates/forgot-password.js";
-import { validateLogin } from "../validates/login.js";
-import { validateRegister } from "../validates/register.js";
-import { validateResetPassword } from "../validates/reset-password.js";
-import { verifyEmailScript } from "../pages/verify-email/verify-email.js";
+import { initOtpInput } from "../components/otp-input/otp-input.js";
+import { validateForgotPassword } from "../pages/forgot-password/validate.js";
+import { validateLogin } from "../pages/login/validate.js";
+import { validateRegister } from "../pages/register/validate.js";
+import { validateResetPassword } from "../pages/reset-password/validate.js";
+import { validateVerifyEmail } from "../pages/verify-email/validate.js";
 
 const getCurrentPage = () => {
   const page = new URLSearchParams(window.location.search).get("page");
@@ -53,7 +54,8 @@ const router = async () => {
         validateResetPassword();
         break;
       case "verify_email":
-        verifyEmailScript();
+        initOtpInput();
+        validateVerifyEmail();
         break;
       default:
         break;

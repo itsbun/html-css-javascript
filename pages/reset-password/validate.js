@@ -1,7 +1,7 @@
 /**
  * Validation: reset password form
  */
-import { isValidEmail, isValidPassword } from "./pattern.js";
+import { isValidPassword } from "../../scripts/regex.js";
 
 export const validateResetPassword = () => {
   const resetPasswordForm = document.getElementById("resetPasswordForm");
@@ -13,11 +13,16 @@ export const validateResetPassword = () => {
   resetPasswordForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
+    const formData = new FormData(resetPasswordForm);
+    const password = String(formData.get("password") ?? "").trim();
+    const confirmPassword = String(
+      formData.get("confirmPassword") ?? "",
+    ).trim();
 
-    const passwordError = document.querySelector(".reset-password__error");
-    const confirmPasswordError = document.querySelector(
+    const passwordError = resetPasswordForm.querySelector(
+      ".reset-password__error",
+    );
+    const confirmPasswordError = resetPasswordForm.querySelector(
       ".confirm-reset-password__error",
     );
 
@@ -26,8 +31,7 @@ export const validateResetPassword = () => {
 
     let isValid = true;
 
-    // Password validation
-    if (password.trim() === "") {
+    if (password === "") {
       passwordError.textContent = "Password is required.";
       isValid = false;
     } else if (!isValidPassword(password)) {
@@ -35,8 +39,7 @@ export const validateResetPassword = () => {
       isValid = false;
     }
 
-    // Confirm Password validation
-    if (confirmPassword.trim() === "") {
+    if (confirmPassword === "") {
       confirmPasswordError.textContent = "Please confirm your password.";
       isValid = false;
     } else if (password !== confirmPassword) {
