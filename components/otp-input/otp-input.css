@@ -21,3 +21,30 @@
 .otp-field:focus {
   border-color: var(--color-primary);
 }
+
+@media (max-width: 426px) {
+  .otp-inputs {
+    width: 100%;
+    gap: 1px;
+  }
+
+  .otp-field {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (max-width: 325px) {
+  .otp-inputs {
+    width: 100%;
+    gap: 0;
+  }
+
+  .otp-field {
+    width: 25px;
+    height: 30px;
+    gap: 0;
+    font-size: var(--font-size-md);
+  }
+}

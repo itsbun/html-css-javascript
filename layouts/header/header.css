@@ -5,7 +5,7 @@
   align-items: center;
   gap: var(--space-2);
   height: 2em;
-  padding: 16px 8px;
+  padding: 24px 8px;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-normal);
   color: var(--color-text-muted);
@@ -14,12 +14,13 @@
 }
 
 .header__nav-item {
+  text-wrap: nowrap;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: var(--space-1);
   height: 20px;
-  padding: 4px 12px;
+  padding: 12px;
   font-weight: var(--font-weight-medium);
   color: var(--color-text-muted);
   text-decoration: none;
@@ -31,4 +32,15 @@
   color: var(--color-white);
   background-color: var(--color-primary);
   cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .header::-webkit-scrollbar {
+    display: none;
+  }
 }

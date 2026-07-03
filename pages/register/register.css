@@ -32,7 +32,7 @@
 
 .register__header-social-item {
   width: 170px;
-  height: 2rem;
+  height: 42px;
   padding: 10px 16px;
   display: flex;
   justify-content: center;
@@ -106,10 +106,10 @@
 
 /* Register Terms */
 .register__terms {
-  padding: 10px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: var(--space-2);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-muted);
@@ -152,4 +152,18 @@
   color: var(--color-primary);
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
+}
+
+/* Responsive */
+@media (max-width: 426px) {
+  .register__header-social-item > button {
+    padding: 0;
+    font-size: 10px;
+    font-weight: var(--font-weight-medium);
+  }
+
+  .register__terms > p,
+  .register__terms > p > a {
+    font-size: var(--font-size-xs);
+  }
 }

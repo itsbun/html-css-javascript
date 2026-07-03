@@ -66,3 +66,10 @@
   padding: 4px 0px;
   line-height: 20px;
 }
+
+/* Responsive */
+@media (max-width: 426px) {
+  .intro__panel {
+    display: none;
+  }
+}
