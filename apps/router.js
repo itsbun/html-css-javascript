@@ -6,6 +6,7 @@ import { toggleNavigation } from "../scripts/common.js";
 import { validateForgotPassword } from "../validates/forgot-password.js";
 import { validateLogin } from "../validates/login.js";
 import { validateRegister } from "../validates/register.js";
+import { validateResetPassword } from "../validates/reset-password.js";
 
 const getCurrentPage = () => {
   const page = new URLSearchParams(window.location.search).get("page");
@@ -14,9 +15,11 @@ const getCurrentPage = () => {
     case "login":
       return "login";
     case "register":
-      return "register";  
+      return "register";
     case "forgot_password":
       return "forgot_password";
+    case "reset_password":
+      return "reset_password";
     default:
       return "login";
   }
@@ -41,6 +44,9 @@ const router = async () => {
         break;
       case "forgot_password":
         validateForgotPassword();
+        break;
+      case "reset_password":
+        validateResetPassword();
         break;
       default:
         break;
