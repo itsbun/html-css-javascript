@@ -9,4 +9,5 @@ export const routes = {
   forgot_password: "pages/forgot-password/forgot-password.html",
   reset_password: "pages/reset-password/reset-password.html",
   verify_email: "pages/verify-email/verify-email.html",
+  success: "pages/success/success.html",
 };

@@ -24,6 +24,8 @@ const getCurrentPage = () => {
       return "reset_password";
     case "verify_email":
       return "verify_email";
+    case "success":
+      return "success";
     default:
       return "login";
   }
