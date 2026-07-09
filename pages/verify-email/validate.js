@@ -1,6 +1,3 @@
-/**
- * Validation: verify email form
- */
 export const validateVerifyEmail = () => {
   const form = document.getElementById("otp-form");
 

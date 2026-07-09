@@ -1,6 +1,3 @@
-/**
- * Validation: login form
- */
 import { isValidEmail } from "../../scripts/regex.js";
 
 export const validateLogin = () => {

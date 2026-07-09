@@ -1,6 +1,3 @@
-/**
- * Validation: register form
- */
 import { navigateTo } from "../../apps/router.js";
 import { isValidEmail, isValidPassword } from "../../scripts/regex.js";
 

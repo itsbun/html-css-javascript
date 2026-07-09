@@ -1,6 +1,3 @@
-/* Verify Email Stylesheets */
-
-/* Header */
 .verify-email__header {
   display: flex;
   flex-direction: column;
@@ -34,7 +31,7 @@
 .verify-email__description > strong {
   font-weight: 700;
 }
-/* Form */
+
 .verify-email__form {
   display: flex;
   flex-direction: column;
@@ -47,7 +44,6 @@
   gap: 8px;
 }
 
-/* Validation */
 .verify-email__error {
   color: var(--color-error);
   font-size: var(--font-size-xs);
@@ -55,7 +51,6 @@
   font-style: italic;
 }
 
-/* Submit Button */
 .verify-email__submit {
   margin-top: 20px;
   width: 100%;
@@ -69,7 +64,6 @@
   cursor: pointer;
 }
 
-/* Footer */
 .verify-email__footer {
   margin-top: 20px;
   display: flex;

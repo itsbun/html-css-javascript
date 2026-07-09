@@ -1,6 +1,3 @@
-/**
- * OTP input component behavior
- */
 export const initOtpInput = () => {
   const form = document.getElementById("otp-form");
   const inputs = form?.querySelectorAll(".otp-field");

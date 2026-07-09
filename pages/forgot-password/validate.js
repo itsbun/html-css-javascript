@@ -1,6 +1,3 @@
-/**
- * Validation: forgot password form
- */
 import { isValidEmail } from "../../scripts/regex.js";
 
 export const validateForgotPassword = () => {

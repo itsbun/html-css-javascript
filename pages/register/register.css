@@ -1,6 +1,3 @@
-/* Register Screen Stylesheets */
-
-/* Register Header */
 .register__header {
   display: flex;
   flex-direction: column;
@@ -80,7 +77,6 @@
   margin-left: 15px;
 }
 
-/* Register Form */
 .register__form {
   display: flex;
   flex-direction: column;
@@ -93,7 +89,6 @@
   gap: 8px;
 }
 
-/* Form validation */
 .fullNameError,
 .emailError,
 .passwordError,
@@ -104,7 +99,6 @@
   font-style: italic;
 }
 
-/* Register Terms */
 .register__terms {
   display: flex;
   justify-content: flex-start;
@@ -123,7 +117,6 @@
   text-decoration: none;
 }
 
-/* Register Submit Button */
 .register__btn-submit {
   width: 100%;
   padding: 10px 16px;
@@ -136,7 +129,6 @@
   cursor: pointer;
 }
 
-/* Register Footer */
 .register__footer {
   margin-top: 20px;
   display: flex;
@@ -154,7 +146,6 @@
   font-weight: var(--font-weight-medium);
 }
 
-/* Responsive */
 @media (max-width: 426px) {
   .register__header-social-item > button {
     padding: 0;
